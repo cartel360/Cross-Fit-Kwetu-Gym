@@ -2,6 +2,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="utf-8">
     <title>Cross Fit Kwetu Gym </title>
     <link rel="icon" href="images/favicon.png" type="image/png" sizes="16x16">
@@ -12,6 +13,7 @@
     <!-- Resource style -->
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/ionicons.min.css">
     <!-- Resource style -->
     <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
@@ -51,7 +53,8 @@
                         <div class="hero-content text-center">
                             <h1 class="wow fadeInUp" data-wow-delay="0.1s">CROSS FIT KWETU GYM</h1>
                             <p class="wow fadeInUp" data-wow-delay="0.2s"> Bring to the table win-win survival strategies to ensure proactive domination. </p>
-                            <a href="#" class="btn btn-action wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Get Strated</a> </div>
+                            <a href="#" class="btn btn-action wow fadeInUp" style="visibility: visible; animation-name: fadeInUp;">Get Strated</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -162,7 +165,8 @@
                 <div class="container">
                     <div class="sub-inner">
                         <h1 class="wow fadeInUp">If it’s not personal, It’s not possible! See The Results and Feel the difference immediatly.</h1>
-                        <a href="#" class="btn btn-action wow fadeInUp">Get Started</a> </div>
+                        <a href="#" class="btn btn-action wow fadeInUp">Get Started</a>
+                    </div>
                 </div>
             </div>
             <!-- Client Section -->
@@ -247,7 +251,11 @@
                                             </div>
                                             <div class="group">
                                                 <label for="pass" class="label">Password</label>
-                                                <input id="pass" type="password" class="input" data-type="password" name="password">
+                                                <input id="myInput" type="password" class="input"  name="password">
+                                            </div>
+                                            <div style="padding: 20px">
+                                                <input type="checkbox" onclick="myFunction()">
+                                                <label style="color: white"><span class="icon"></span> Show Password</label>
                                             </div>
                                             <div class="group">
                                                 <input id="check" type="checkbox" class="check" checked>
@@ -308,9 +316,9 @@
                                                     <div class="group">
                                                         <label for="gender" class="label">Gender</label>
                                                         <select name="gender" id="gender" class="input">
-                                                      <option value="Male" style="color: black;">Male</option>
-                                                      <option value="Female" style="color: black;">Female</option>
-                                                    </select>
+                                                            <option value="Male" style="color: black;">Male</option>
+                                                            <option value="Female" style="color: black;">Female</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                             </div>
@@ -326,8 +334,8 @@
                                             <div class="hr"></div>
                                             <div class="foot-lnk">
                                                 <label for="tab-1">Already Member?</a>
-                                        </div>
-                                      </form>
+                                            </div>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -335,7 +343,7 @@
                     </div>
                 </div>
             </div>
-                                        
+
 
             <!-- Footer Section -->
             <div class="footer" id="contact">
@@ -356,7 +364,8 @@
                     <div class="col-md-3 contact">
                         <h1>Contact Us</h1>
                         <p> Contact our 24/7 customer support if you have any questions. We'll help you out. </p>
-                        <a href="mailto:support@gmail.com">contact@crossfit.com</a> </div>
+                        <a href="mailto:support@gmail.com">contact@crossfit.com</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -372,6 +381,17 @@
     </div>
     <!-- Wrapper-->
 
+    <script>
+        function myFunction() {
+            var x = document.getElementById("myInput");
+            if (x.type === "password") {
+                x.type = "text";
+            } else {
+                x.type = "password";
+            }
+        }
+    </script>
+
     <!-- Jquery and Js Plugins -->
     <script type="text/javascript" src="js/jquery-2.1.1.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -379,6 +399,8 @@
     <script type="text/javascript" src="js/menu.js"></script>
     <script type="text/javascript" src="js/custom.js"></script>
     <script src="js/jquery.subscribe.js"></script>
+
+
 </body>
 
 </html>
