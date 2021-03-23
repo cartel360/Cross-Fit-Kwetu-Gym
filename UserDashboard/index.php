@@ -7,7 +7,6 @@ include 'include/db_conn.php';
 $fullname = $_SESSION['name'];
 $userid = $_SESSION['user'];
 
-
 ?>
 
 
@@ -159,6 +158,9 @@ $userid = $_SESSION['user'];
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i> Logout
+                                </a>
+                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#changePasswordModal">
+                                    <i class="fas fa-key fa-sm fa-fw mr-2 text-gray-400"></i> Change Password
                                 </a>
                             </div>
                         </li>
@@ -324,6 +326,52 @@ $userid = $_SESSION['user'];
         </div>
     </div>
 
+    <!-- Change Password Modal-->
+    <div class="modal fade" id="changePasswordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Change Password?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="changePassword.php" method="POST">
+                        <div class="form-group">
+                            <label for="currentPassword">Current Password</label>
+                            <input type="password" name="currentPassword" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                            <label for="newPassword">New Password</label>
+                            <input type="password" name="newPassword" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+                        <div class="form-group">
+                            <label for="confirmPassword">Confirm Password</label>
+                            <input type="password" name="confirmPassword" id="" class="form-control" placeholder="" aria-describedby="helpId">
+                        </div>
+
+                        <div class="form-group" hidden>
+                            <label for="userid">User ID</label>
+                            <input type="text" name="userid" id="" class="form-control" placeholder="" aria-describedby="helpId" value=" <?php echo $userid; ?>">
+                        </div>
+
+                        <div class="form-group">
+                            <input type="submit" name="submit" id="" class="form-control btn btn-secondary" value="Change Password">
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -344,4 +392,3 @@ $userid = $_SESSION['user'];
 </body>
 
 </html>
-

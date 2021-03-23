@@ -173,7 +173,7 @@ page_protect();
                                                     </tr>
                                                     <tr>
                                                         <td height="35">JOINING DATE:</td>
-                                                        <td height="35"><input type="date" name="jdate" id="boxx" required size="30"></td>
+                                                        <td height="35"><input type="date" name="jdate" id="boxx" required size="30"  min="<?php echo date("Y-m-d"); ?>"></td>
                                                     </tr>
                                                     <tr>
                                                         <td height="35">PLAN:</td>

@@ -247,11 +247,11 @@
                                         <form action="user_login.php" method="POST">
                                             <div class="group">
                                                 <label for="user" class="label">Username</label>
-                                                <input id="user" type="text" class="input" name="username">
+                                                <input id="user" type="text" class="input" name="username" onkeypress="return /[a-z]/i.test(event.key)">
                                             </div>
                                             <div class="group">
                                                 <label for="pass" class="label">Password</label>
-                                                <input id="myInput" type="password" class="input"  name="password">
+                                                <input id="myInput" type="password" class="input" name="password">
                                             </div>
                                             <div style="padding: 20px">
                                                 <input type="checkbox" onclick="myFunction()">
@@ -277,7 +277,7 @@
                                                 <div class="col-md-6">
                                                     <div class="group">
                                                         <label for="user" class="label">Username</label>
-                                                        <input id="user" type="text" class="input" name="username">
+                                                        <input id="user" type="text" class="input" name="username" onkeypress="return /[a-z]/i.test(event.key)">
                                                     </div>
 
                                                 </div>
@@ -300,7 +300,7 @@
                                                 <div class="col-md-6">
                                                     <div class="group">
                                                         <label for="phone" class="label">Phone No.</label>
-                                                        <input id="phone" type="text" class="input" name="phone">
+                                                        <input id="phone" type="text" class="input" name="phone" maxlength="10">
                                                     </div>
                                                 </div>
                                             </div>
@@ -309,7 +309,7 @@
                                                 <div class="col-md-6">
                                                     <div class="group">
                                                         <label for="dob" class="label">Date of Birth</label>
-                                                        <input id="dob" type="date" class="input" name="dob">
+                                                        <input id="dob" type="date" class="input" name="dob" max="<?php echo date("Y-m-d"); ?>">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
