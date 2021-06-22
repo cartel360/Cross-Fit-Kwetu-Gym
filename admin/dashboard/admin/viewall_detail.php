@@ -249,7 +249,7 @@ if (isset($_POST['name'])) {
 									<tr>
 										<td height="35">&nbsp;</td>
 										<td height="35"><input class="a1-btn a1-blue" type="submit" name="submit" id="submit" value="EDIT">
-											<a href="table_view"><input class="a1-btn a1-blue" id="" value="BACK"></a>
+											<a href="table_view.php"><input class="a1-btn a1-blue" id="" value="BACK"></a>
 										</td>
 									</tr>
 

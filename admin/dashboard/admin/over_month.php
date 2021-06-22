@@ -7,9 +7,9 @@ $flag = $_GET['flag'];
 $query = "";
 
 if ($flag == 0)
-	$query = "select * from users u INNER JOIN address a on u.userid=a.id where u.joining_date like '" . $year . "-" . $month . "___'";
+	$query = "SELECT * FROM users u INNER JOIN address a on u.userid=a.id where u.joining_date like '" . $year . "-" . $month . "___'";
 else if ($flag == 1)
-	$query = "select * from users u INNER JOIN address a on u.userid=a.id where u.joining_date like '" . $year . "______'";
+	$query = "SELECT * FROM users u INNER JOIN address a on u.userid=a.id where u.joining_date like '" . $year . "______'";
 
 
 $res = mysqli_query($con, $query);
@@ -26,7 +26,6 @@ if (mysqli_affected_rows($con) != 0) {
 					<th>Name</th>
 					<th>Contact</th>
 					<th>Gender</th>
-					<th>State</th>
 					<th>City</th>
 					<th>DOB</th>
 					<th>Joining_Date</th>
@@ -46,8 +45,6 @@ if (mysqli_affected_rows($con) != 0) {
 
 
 		echo "<td>" . $row['gender'] . "</td>";
-
-		echo "<td>" . $row['state'] . "</td>";
 
 		echo "<td>" . $row['city'] . "</td>";
 

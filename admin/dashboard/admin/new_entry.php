@@ -101,25 +101,13 @@ page_protect();
            	   <td height="35"><input type="text" id="boxx" name="m_id" value="<?php echo time(); ?>" readonly required/></td>
          	   </tr>
 			   
-			   <tr>
+		 <tr>
                <td height="35">NAME:</td>
-               <td height="35"><input name="u_name" id="boxx"  required/></td>
+               <td height="35"><input name="fullname" id="boxx"  required /></td>
              </tr>
-             <tr>
-               <td height="35">STREET NAME:</td>
-               <td height="35"><input  name="street_name" id="boxx"   required/></td>
-             </tr>
-             <tr>
-               <td height="35">CITY:</td>
-               <td height="35"><input <input type="text" name="city" id="boxx" required/ ></td>
-             </tr>
-             <tr>
-               <td height="35">ZIPCODE:</td>
-               <td height="35"><input type="number" name="zipcode" id="boxx" maxlength="6" required / ></td>
-             </tr>
-            <tr>
-               <td height="35">STATE:</td>
-               <td height="35"><input type="text" name="state" id="boxx" required/ size="30"></td>
+              <tr>
+               <td height="35">USERNAME:</td>
+               <td height="35"><input name="u_name" id="boxx"  required onkeypress="return /[a-z]/i.test(event.key)" /></td>
              </tr>
             <tr>
                <td height="35">GENDER:</td>
@@ -132,7 +120,7 @@ page_protect();
              </tr>
             <tr>
                <td height="35">DATE OF BIRTH:</td>
-               <td height="35"><input type="date" name="dob" id="boxx" required/ size="30"></td>
+               <td height="35"><input type="date" name="dob" id="boxx" max="<?php echo date('Y-m-d'); ?>" required/ size="30"></td>
              </tr>
 			 <tr>
                <td height="35">PHONE NO:</td>
@@ -142,16 +130,20 @@ page_protect();
                <td height="35">EMAIL ID:</td>
                <td height="35"><input type="email" name="email" id="boxx" required/ size="30"></td>
              </tr>
+              <tr>
+               <td height="35">PASSWORD:</td>
+               <td height="35"><input type="password" name="password" id="boxx" required/ size="30" </td>
+             </tr>
 			 <tr>
                <td height="35">JOINING DATE:</td>
-               <td height="35"><input type="date" name="jdate" id="boxx" required size="30"></td>
+               <td height="35"><input type="date" name="jdate" id="boxx" required size="30" min="<?php echo date('Y-m-d') ?>"></td>
              </tr>
              <tr>
                <td height="35">PLAN:</td>
                <td height="35"><select name="plan" id="boxx" required onchange="myplandetail(this.value)">
 					<option value="">--Please Select--</option>
 					<?php
-						$query="select * from plan where active='yes'";
+						$query="SELECT * FROM plan WHERE active='yes'";
 						$result=mysqli_query($con,$query);
 						if(mysqli_affected_rows($con)!=0){
 							while($row=mysqli_fetch_row($result)){

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Mar 04, 2021 at 10:19 AM
+-- Generation Time: Mar 24, 2021 at 10:04 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 7.4.13
 
@@ -30,19 +30,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `address` (
   `id` varchar(20) NOT NULL,
   `streetName` varchar(40) NOT NULL,
-  `state` varchar(15) NOT NULL,
-  `city` varchar(15) NOT NULL,
-  `zipcode` varchar(20) DEFAULT NULL
+  `city` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
 
 --
 -- Dumping data for table `address`
 --
 
-INSERT INTO `address` (`id`, `streetName`, `state`, `city`, `zipcode`) VALUES
-('1613316841', 'General Kago', 'Kenya', 'Nairobi', '00100'),
-('1613316854', 'General Kago', 'Kenya', 'Nairobi', '00100'),
-('1613316989', 'General Kago', 'Kenya', 'Nairobi', '00100');
+INSERT INTO `address` (`id`, `streetName`, `city`) VALUES
+('1613316841', 'General Kago', 'Nairobi'),
+('1613316854', 'General Kago', 'Nairobi'),
+('1613316989', 'General Kago', 'Nairobi');
 
 -- --------------------------------------------------------
 

@@ -3,13 +3,8 @@ require '../../include/db_conn.php';
 $month = $_GET['mm'];
 $year = $_GET['yy'];
 
-$query = "select DISTINCT u.userid,u.username,u.gender,u.mobile,
-u.email,u.joining_date,a.state,a.city,
-e.paid_date,e.expire,p.planName,p.amount,p.validity from users u 
-INNER JOIN address a on u.userid=a.id 
-INNER JOIN enrolls_to e on u.userid=e.uid
-INNER JOIN plan p on p.pid=e.pid
-where e.paid_date  like '" . $year . "-" . $month . "___'";
+$query = "SELECT DISTINCT u.userid,u.username,u.gender,u.mobile, u.email,u.joining_date,a.city, e.paid_date,e.expire,p.planName,p.amount,p.validity from users u  INNER JOIN address a on u.userid=a.id 
+INNER JOIN enrolls_to e on u.userid=e.uid INNER JOIN plan p on p.pid=e.pid WHERE e.paid_date  like '" . $year . "-" . $month . "___'";
 
 
 $res = mysqli_query($con, $query);
@@ -33,7 +28,6 @@ if (mysqli_affected_rows($con) != 0) { ?>
 				<th>Name</th>
 				<th>Contact</th>
 				<th>Gender</th>
-				<th>State</th>
 				<th>Paid_Date</th>
 				<th>Expire_Date</th>
 				<th>Plan_Name</th>
@@ -47,6 +41,7 @@ if (mysqli_affected_rows($con) != 0) { ?>
 				while ($row = mysqli_fetch_array($res, MYSQLI_ASSOC)) {
 
 
+					echo "<tr>";
 
 					echo "<td>" . $sno . "</td>";
 
@@ -59,7 +54,6 @@ if (mysqli_affected_rows($con) != 0) { ?>
 
 					echo "<td>" . $row['gender'] . "</td>";
 
-					echo "<td>" . $row['state'] . "</td>";
 
 					echo "<td>" . $row['paid_date'] . "</td>";
 
@@ -70,6 +64,8 @@ if (mysqli_affected_rows($con) != 0) { ?>
 					echo "<td>" . $row['amount'] . "</td>";
 
 					echo "<td>" . $row['validity'] . " Month</td>";
+					
+					echo "</tr>";
 
 					$totalamount = $totalamount + $row['amount'];
 					$sno++;

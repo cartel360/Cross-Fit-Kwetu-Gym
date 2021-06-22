@@ -200,34 +200,26 @@
                             <h1 class="wow fadeInUp" data-wow-delay="0s">PACKAGES</h1>
                             <p class="wow fadeInUp" data-wow-delay="0.2s"> Below are the packages currently offered at <br> Cross Fit Kwetu Gym</p>
                         </div>
-                        <div class="col-sm-6">
+                        <?php 
+                        include("userDashboard/include/db_conn.php");
+                        $query = mysqli_query($con, "SELECT * FROM plan WHERE active = 'yes'");
+                        while ($rows = mysqli_fetch_array($query, MYSQLI_ASSOC)){
+                            ?>
+                            <div class="col-sm-6">
                             <div class="table-left wow fadeInUp" data-wow-delay="0.4s">
                                 <div class="pricing-details">
-                                    <h2>Monthly</h2>
-                                    <span>Kshs. 1,000</span>
-                                    <ul>
-                                        <li>Less than 4 hours of training per session</li>
-                                        <li>Get Trainer one day in a week</li>
-                                        <li>Morning & Eveneing Sessions Only</li>
-                                    </ul>
+                                    <h2><?php echo $rows['planName']; ?></h2>
+                                    <span>Kshs. <?php echo $rows['amount']; ?></span>
+                                    <p><?php echo $rows['description']; ?></p> <br>
                                     <button class="btn btn-primary btn-action btn-fill">Get Plan</button>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="table-right wow fadeInUp" data-wow-delay="0.6s">
-                                <div class="pricing-details">
-                                    <h2>Yearly</h2>
-                                    <span>Kshs. 10,000</span>
-                                    <ul>
-                                        <li>Supervised Training</li>
-                                        <li>More than 5 hours of training per day</li>
-                                        <li>Self Defence Classes Inclusive</li>
-                                    </ul>
-                                    <button class="btn btn-primary btn-action btn-fill">Get Plan</button>
-                                </div>
-                            </div>
-                        </div>
+                        <?php
+                        }
+
+                        ?>
+                    
                     </div>
                 </div>
             </div>
@@ -265,9 +257,7 @@
                                                 <input type="submit" class="button" value="Sign In">
                                             </div>
                                             <div class="hr"></div>
-                                            <div class="foot-lnk">
-                                                <a href="#forgot">Forgot Password?</a>
-                                            </div>
+                                           
                                         </form>
                                     </div>
                                     <div class="sign-up-htm">
@@ -285,7 +275,7 @@
                                                 <div class="col-md-6">
                                                     <div class="group">
                                                         <label for="fullname" class="label">Full Name</label>
-                                                        <input id="fullname" type="text" class="input" name="fullname">
+                                                        <input id="fullname" type="text" class="input" name="fullname" >
                                                     </div>
                                                 </div>
                                             </div>
@@ -300,7 +290,7 @@
                                                 <div class="col-md-6">
                                                     <div class="group">
                                                         <label for="phone" class="label">Phone No.</label>
-                                                        <input id="phone" type="text" class="input" name="phone" maxlength="10">
+                                                        <input id="phone" type="number" class="input" name="phone" maxlength="10">
                                                     </div>
                                                 </div>
                                             </div>
@@ -309,7 +299,7 @@
                                                 <div class="col-md-6">
                                                     <div class="group">
                                                         <label for="dob" class="label">Date of Birth</label>
-                                                        <input id="dob" type="date" class="input" name="dob" max="<?php echo date("Y-m-d"); ?>">
+                                                        <input id="dob" type="date" class="input" name="dob" max="<?php echo date("2003-01-01"); ?>">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">

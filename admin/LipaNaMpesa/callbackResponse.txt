@@ -1,0 +1,113 @@
+{
+    "Body": {
+        "stkCallback": {
+            "MerchantRequestID": "43394-2020573-1",
+            "CheckoutRequestID": "ws_CO_200420210034457961",
+            "ResultCode": 1031,
+            "ResultDesc": "Request cancelled by user"
+        }
+    }
+} {
+    "Body": {
+        "stkCallback": {
+            "MerchantRequestID": "2674-28613771-1",
+            "CheckoutRequestID": "ws_CO_200420210040349665",
+            "ResultCode": 1031,
+            "ResultDesc": "Request cancelled by user"
+        }
+    }
+} {
+    "Body": {
+        "stkCallback": {
+            "MerchantRequestID": "22233-5731834-1",
+            "CheckoutRequestID": "ws_CO_020520210042233269",
+            "ResultCode": 0,
+            "ResultDesc": "The service request is processed successfully.",
+            "CallbackMetadata": {
+                "Item": [{
+                        "Name": "Amount",
+                        "Value": 1.00
+                    },
+                    {
+                        "Name": "MpesaReceiptNumber",
+                        "Value": "PE25GZDRO5"
+                    },
+                    {
+                        "Name": "Balance"
+                    },
+                    {
+                        "Name": "TransactionDate",
+                        "Value": 20210502004242
+                    },
+                    {
+                        "Name": "PhoneNumber",
+                        "Value": 254757206542
+                    }
+                ]
+            }
+        }
+    }
+} {
+    "Body": {
+        "stkCallback": {
+            "MerchantRequestID": "14352-27557903-1",
+            "CheckoutRequestID": "ws_CO_130520211135502743",
+            "ResultCode": 1032,
+            "ResultDesc": "Request cancelled by user"
+        }
+    }
+} {
+    "Body": {
+        "stkCallback": {
+            "MerchantRequestID": "4481-5047324-1",
+            "CheckoutRequestID": "ws_CO_130520211135569439",
+            "ResultCode": 1032,
+            "ResultDesc": "Request cancelled by user"
+        }
+    }
+} {
+    "Body": {
+        "stkCallback": {
+            "MerchantRequestID": "92299-27450813-1",
+            "CheckoutRequestID": "ws_CO_130520211149453464",
+            "ResultCode": 1032,
+            "ResultDesc": "Request cancelled by user"
+        }
+    }
+} {
+    "Body": {
+        "stkCallback": {
+            "MerchantRequestID": "22991-5058696-1",
+            "CheckoutRequestID": "ws_CO_130520211149596008",
+            "ResultCode": 1032,
+            "ResultDesc": "Request cancelled by user"
+        }
+    }
+} {
+    "Body": {
+        "stkCallback": {
+            "MerchantRequestID": "16313-27508096-1",
+            "CheckoutRequestID": "ws_CO_130520211203154819",
+            "ResultCode": 1032,
+            "ResultDesc": "Request cancelled by user"
+        }
+    }
+} {
+    "Body": {
+        "stkCallback": {
+            "MerchantRequestID": "72819-27533126-1",
+            "CheckoutRequestID": "ws_CO_130520211308211627",
+            "ResultCode": 1032,
+            "ResultDesc": "Request cancelled by user"
+        }
+    }
+} {
+    "Body": {
+        "stkCallback": {
+            "MerchantRequestID": "59670-5255016-1",
+            "CheckoutRequestID": "ws_CO_130520211335347631",
+            "ResultCode": 1032,
+            "ResultDesc": "Request cancelled by user"
+        }
+    }
+}{"Body":{"stkCallback":{"MerchantRequestID":"4460-5193931-1","CheckoutRequestID":"ws_CO_130520211337322043","ResultCode":0,"ResultDesc":"The service request is processed successfully.","CallbackMetadata":{"Item":[{"Name":"Amount","Value":1.00},{"Name":"MpesaReceiptNumber","Value":"PED4W9RD80"},{"Name":"Balance"},{"Name":"TransactionDate","Value":20210513133744},{"Name":"PhoneNumber","Value":254757206542}]}}}}

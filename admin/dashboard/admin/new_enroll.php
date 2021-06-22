@@ -97,7 +97,7 @@ page_protect();
             if (isset($_POST['name'])) {
                 $memid = $_POST['name'];
 
-                echo $memid;
+                // echo $memid;
 
                 $query = "SELECT * FROM users WHERE userid = $memid";
                 $result = mysqli_query($con, $query);

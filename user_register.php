@@ -1,6 +1,17 @@
 <?php
-require '../include/db_conn.php';
-page_protect();
+$host     = "localhost"; // Host name 
+$username = "root"; // Mysql username 
+$password = ""; // Mysql password 
+$db_name  = "CrossFit"; // Database name 
+
+// Connect to server and select databse.
+$con = mysqli_connect($host, $username, $password, $db_name);
+
+// Check connection
+if (mysqli_connect_errno($con)) {
+    echo "Failed to connect to MySQL: " . mysqli_connect_error();
+}
+
 
  $memID=$_POST['m_id'];
  $uname=$_POST['username'];
