@@ -97,7 +97,7 @@ page_protect();
             if (isset($_POST['name'])) {
                 $memid = $_POST['name'];
 
-                // echo $memid;
+               
 
                 $query = "SELECT * FROM users WHERE userid = $memid";
                 $result = mysqli_query($con, $query);
@@ -139,22 +139,7 @@ page_protect();
                                                         <td height="35">USERNAME:</td>
                                                         <td height="35"><input name="u_name" id="boxx" required value="<?php echo $u_name; ?>" readonly /></td>
                                                     </tr>
-                                                    <tr>
-                                                        <td height="35">STREET NAME:</td>
-                                                        <td height="35"><input name="street_name" id="boxx" required /></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="35">CITY:</td>
-                                                        <td height="35"><input <input type="text" name="city" id="boxx" required /></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="35">ZIPCODE:</td>
-                                                        <td height="35"><input type="number" name="zipcode" id="boxx" maxlength="6" required /></td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td height="35">STATE:</td>
-                                                        <td height="35"><input type="text" name="state" id="boxx" required/ size="30"></td>
-                                                    </tr>
+                                                    
                                                     <tr>
                                                         <td height="35">GENDER:</td>
                                                         <td height="35"><input type="text" name=" gender" id="boxx" value="<?php echo $gender; ?>" readonly /> </td>

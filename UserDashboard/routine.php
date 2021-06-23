@@ -83,15 +83,7 @@ $userid = $_SESSION['user'];
                 </a>
             </li>
 
-            <li class="nav-item">
-                <a class="nav-link" href="payments.php">
-                    <i class="fas fa-fw fa-money-bill"></i>
-                    <span>Payments</span>
-                </a>
-            </li>
-
-
-            <!-- Divider -->
+                     <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
 
             <!-- Sidebar Toggler (Sidebar) -->

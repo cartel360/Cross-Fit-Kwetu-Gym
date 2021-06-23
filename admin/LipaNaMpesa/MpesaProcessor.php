@@ -3,12 +3,8 @@ require __DIR__ . '/vendor/autoload.php';
 
 use Carbon\Carbon;
 
-// $amount = $_POST['amount'];
-
-if (isset($_POST['deposit_btn'])) {
-    $phone = $_POST['phone'];
-    $amount = $_POST['amount'];
-    stkPush($phone, $amount);
+if (isset($_GET['amount'])) {
+    stkPush($_GET['amount']);
 }
 function lipaNaMpesaPassword()
 {
@@ -22,12 +18,12 @@ function lipaNaMpesaPassword()
 
     return $mpesaPassword;
 }
-
+    
 
    function newAccessToken()
    {
-       $consumer_key= "PhTcimspkNT9JnhGc9q2xnZyGZl0cGGE";
-       $consumer_secret= "RJmUWBZy9QPUco4n";
+       $consumer_key="2sh2YA1fTzQwrZJthIrwLMoiOi3nhhal";
+       $consumer_secret="CKaCnw224K4Lc56w";
        $credentials = base64_encode($consumer_key.":".$consumer_secret);
        $url = "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials";
 
@@ -41,13 +37,13 @@ function lipaNaMpesaPassword()
        $curl_response = curl_exec($curl);
        $access_token=json_decode($curl_response);
        curl_close($curl);
-
+       
        return $access_token->access_token;
    }
 
 
 
-   function stkPush($phone, $amount)
+   function stkPush($amount)
    {
        //    $user = $request->user;
        //    $amount = $request->amount;
@@ -56,8 +52,8 @@ function lipaNaMpesaPassword()
        //    $code = "254";
        //    $phoneNumber = $code.$formatedPhone;//254726582228
 
-
-
+      
+       
 
 
        $url = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
@@ -67,11 +63,11 @@ function lipaNaMpesaPassword()
             'Timestamp' => Carbon::rawParse('now')->format('YmdHms'),
             'TransactionType' => 'CustomerPayBillOnline',
             'Amount' => $amount,
-            'PartyA' => $phone,
+            'PartyA' => "254790765441",
             'PartyB' => 174379,
-            'PhoneNumber' => $phone,
-            'CallBackURL' => 'http://e03416278dcf.ngrok.io/Student-Bank/Pay_API/callback_url.php',
-            'AccountReference' => "Online Bank of MKU",
+            'PhoneNumber' => "254790765441",
+            'CallBackURL' => 'https://60a8b840129d.ngrok.io/callback',
+            'AccountReference' => "Simon's Tech School Payment",
             'TransactionDesc' => "lipa Na M-PESA"
         ];
 

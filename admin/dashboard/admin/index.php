@@ -120,7 +120,7 @@ page_protect();
 					<div class="tile-stats tile-green">
 						<div class="icon"><i class="entypo-chart-bar"></i></div>
 						<div class="num" data-postfix="" data-duration="1500" data-delay="0">
-							<h2>Total <br>Members</h2><br>
+							<h2>Total Members</h2><br>
 							<?php
 							$query = "select COUNT(*) from users";
 

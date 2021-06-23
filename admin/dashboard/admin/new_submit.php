@@ -5,6 +5,7 @@ page_protect();
  $memID=$_POST['m_id'];
  $uname=$_POST['u_name'];
  $fullname=$_POST['fullname'];
+ $city=$_POST['city'];
  $gender=$_POST['gender'];
  $dob=$_POST['dob'];
  $phn=$_POST['mobile'];
@@ -15,9 +16,7 @@ page_protect();
  $status = 1;
 
 //inserting into users table
-$query = "UPDATE users SET status = '1' WHERE userid = '$memID'";
-$query1 = mysqli_query($con, "UPDATE users SET joining_date = '$jdate' WHERE userid = '$memID'");
-// $query="INSERT INTO users(fullname, username,gender,mobile,email,dob,joining_date,userid,password, status) VALUES('$fullname','$uname','$gender','$phn','$email','$dob','$jdate','$memID', '$password','$status')";
+$query="INSERT INTO users(fullname, username,gender,mobile,email,dob,joining_date,userid,password, status) VALUES('$fullname','$uname','$gender','$phn','$email','$dob','$jdate','$memID', '$password','$status') ON DUPLICATE KEY UPDATE joining_date='$jdate', `status`='1' ";
     if(mysqli_query($con,$query)==1){
       //Retrieve information of plan selected by user
       $query1="SELECT * FROM plan WHERE pid='$plan'";

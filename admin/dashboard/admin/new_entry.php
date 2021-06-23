@@ -120,7 +120,7 @@ page_protect();
              </tr>
             <tr>
                <td height="35">DATE OF BIRTH:</td>
-               <td height="35"><input type="date" name="dob" id="boxx" max="<?php echo date('Y-m-d'); ?>" required/ size="30"></td>
+               <td height="35"><input type="date" name="dob" id="boxx" max="<?php echo date('2003-01-01'); ?>" required/ size="30"></td>
              </tr>
 			 <tr>
                <td height="35">PHONE NO:</td>
@@ -143,7 +143,7 @@ page_protect();
                <td height="35"><select name="plan" id="boxx" required onchange="myplandetail(this.value)">
 					<option value="">--Please Select--</option>
 					<?php
-						$query="SELECT * FROM plan WHERE active='yes'";
+						$query="select * from plan where active='yes'";
 						$result=mysqli_query($con,$query);
 						if(mysqli_affected_rows($con)!=0){
 							while($row=mysqli_fetch_row($result)){

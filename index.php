@@ -211,7 +211,7 @@
                                     <h2><?php echo $rows['planName']; ?></h2>
                                     <span>Kshs. <?php echo $rows['amount']; ?></span>
                                     <p><?php echo $rows['description']; ?></p> <br>
-                                    <button class="btn btn-primary btn-action btn-fill">Get Plan</button>
+                                    <a class="btn btn-primary btn-action btn-fill page-scroll" href="#sign_in">Get Plan</a>
                                 </div>
                             </div>
                         </div>
@@ -225,7 +225,7 @@
             </div>
 
             <!-- Subscribe Form -->
-            <div class="cta-sub no-color">
+            <div class="cta-sub no-color" id="sign_in">
                 <div class="container">
                     <div class="cta-inner">
                         <h1 class="wow fadeInUp" data-wow-delay="0s">Want to Join Us and be part of the movememnt</h1>
